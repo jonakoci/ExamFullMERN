@@ -18,7 +18,7 @@ function App() {
       <Route path='/' element={ <Navigate to='/pirates' /> } /> 
         <Route path="/pirates" element={<PirateList update={update} setUpdate={setUpdate} />}/>
         <Route path= "/pirate/new" element={<CreatePirate  update={update} setUpdate={setUpdate} />} />
-        <Route path= "/pirate/:id" element={<Details />} /> 
+        <Route path= "/pirate/:id" element={<Details update={update} setUpdate={setUpdate} />} /> 
       </Routes>
       </BrowserRouter>
 

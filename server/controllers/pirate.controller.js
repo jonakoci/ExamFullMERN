@@ -40,7 +40,7 @@ module.exports.updatePirate = (req, res)=>{
         res.json(updatedPirate)
     })
     .catch((err) => {
-          res.json({ err });       
+        res.status(400).json({ err });    
       });
 }; 
 
