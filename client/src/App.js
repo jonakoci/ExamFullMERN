@@ -4,6 +4,7 @@ import CreatePirate from './components/CreatePirate';
 import Details from './components/Details';
 import PirateList from './components/PirateList';
 import {useState} from 'react'
+import Main from './view/main';
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
       {/* <h1>Hello</h1> */}
       <BrowserRouter> 
       <Routes>
-      <Route path='/' element={ <Navigate to='/pirates' /> } /> 
+      <Route path='/' element={ <Main /> } /> 
         <Route path="/pirates" element={<PirateList update={update} setUpdate={setUpdate} />}/>
         <Route path= "/pirate/new" element={<CreatePirate  update={update} setUpdate={setUpdate} />} />
         <Route path= "/pirate/:id" element={<Details update={update} setUpdate={setUpdate} />} /> 
